@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Mobile Slideshow&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.custom-slideshow {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slide {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slide.active {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slide img {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: auto;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slide-text {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateX(-50%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(0, 0, 0, 0.6);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.prev, .next {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-50%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(0,0,0,0.5);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.prev { left: 5px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.next { right: 5px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="custom-slideshow"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide active"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="https://static.wixstatic.com/media/a8d68c_62dccd8f98a64a98a7bf354fa84d8dcd~mv2.jpg" alt="Roman Style Pizza"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="slide-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;Roman Style Pizza&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;Experience our thin and crispy Roman-style pizza...&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="https://static.wixstatic.com/media/a8d68c_495f63e989e14377bf58b658d3caa802~mv2.jpg" alt="Signature BBQ"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="slide-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;Signature BBQ&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;Dive into our Signature BBQ experience...&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="https://static.wixstatic.com/media/a8d68c_8839624fee7c484a95e4260e3070fb55~mv2.jpg" alt="Mexican Fiesta"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="slide-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;Mexican Fiesta&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;Indulge in our Mexican Fiesta with fresh burritos...&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="https://static.wixstatic.com/media/a8d68c_4db2e272bccd4f7a94f7a8b589b60c2e~mv2.jpg" alt="Dirty Burgers &amp; Gourmet Fries"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="slide-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;Dirty Burgers &amp; Gourmet Fries&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;Sink your teeth into our juicy gourmet burgers...&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="prev" onclick="changeSlide(-1)"&gt;&amp;#10094;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="next" onclick="changeSlide(1)"&gt;&amp;#10095;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let slideIndex = 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function changeSlide(n) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let slides = document.querySelectorAll('.slide');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>slides[slideIndex].classList.remove('active');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>slideIndex = (slideIndex + n + slides.length) % slides.length;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>slides[slideIndex].classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
