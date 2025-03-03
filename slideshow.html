@@ -1,100 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Slideshow</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-        .custom-slideshow {
-            position: relative;
-            max-width: 100%;
-            overflow: hidden;
-            text-align: center;
-        }
-        .slide {
-            display: none;
-            position: relative;
-        }
-        .slide.active {
-            display: block;
-        }
-        .slide img {
-            width: 100%;
-            height: auto;
-        }
-        .slide-text {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.6);
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
-        }
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-        }
-        .prev { left: 5px; }
-        .next { right: 5px; }
-    </style>
+    <title>Test Page</title>
 </head>
 <body>
-    <div class="custom-slideshow">
-        <div class="slide active">
-            <img src="https://static.wixstatic.com/media/a8d68c_62dccd8f98a64a98a7bf354fa84d8dcd~mv2.jpg" alt="Roman Style Pizza">
-            <div class="slide-text">
-                <h2>Roman Style Pizza</h2>
-                <p>Experience our thin and crispy Roman-style pizza...</p>
-            </div>
-        </div>
-        <div class="slide">
-            <img src="https://static.wixstatic.com/media/a8d68c_495f63e989e14377bf58b658d3caa802~mv2.jpg" alt="Signature BBQ">
-            <div class="slide-text">
-                <h2>Signature BBQ</h2>
-                <p>Dive into our Signature BBQ experience...</p>
-            </div>
-        </div>
-        <div class="slide">
-            <img src="https://static.wixstatic.com/media/a8d68c_8839624fee7c484a95e4260e3070fb55~mv2.jpg" alt="Mexican Fiesta">
-            <div class="slide-text">
-                <h2>Mexican Fiesta</h2>
-                <p>Indulge in our Mexican Fiesta with fresh burritos...</p>
-            </div>
-        </div>
-        <div class="slide">
-            <img src="https://static.wixstatic.com/media/a8d68c_4db2e272bccd4f7a94f7a8b589b60c2e~mv2.jpg" alt="Dirty Burgers & Gourmet Fries">
-            <div class="slide-text">
-                <h2>Dirty Burgers & Gourmet Fries</h2>
-                <p>Sink your teeth into our juicy gourmet burgers...</p>
-            </div>
-        </div>
-        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="next" onclick="changeSlide(1)">&#10095;</button>
-    </div>
-    <script>
-        let slideIndex = 0;
-        function changeSlide(n) {
-            let slides = document.querySelectorAll('.slide');
-            slides[slideIndex].classList.remove('active');
-            slideIndex = (slideIndex + n + slides.length) % slides.length;
-            slides[slideIndex].classList.add('active');
-        }
-    </script>
+    <h1>GitHub Pages is Working!</h1>
 </body>
 </html>
+
 
